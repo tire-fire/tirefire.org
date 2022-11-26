@@ -22,5 +22,5 @@ The image should automatically log in. The username and passwords are in the rea
 There are a lot more forensics questions than most images. I felt like students don't get enough direction, so virtually every finding in the image gets a hint from a forensics question.
 
 ## Download
-The link is here https://ln5.sync.com/dl/3e4ff83c0/u2wyn5b9-yuthhkgw-dqhghbr4-qme8tqjx
+The link is here https://ln5.sync.com/dl/3e4ff83c0/u2wyn5b9-yuthhkgw-dqhghbr4-qme8tqjx \
 md5sum: `7dea833a7ae4b82e338785dfaf55ac93  mr.robot.sh.zip`
