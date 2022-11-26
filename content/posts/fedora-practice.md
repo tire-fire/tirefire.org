@@ -2,7 +2,7 @@
 title = "Fedora Practice Image"
 date = "2022-11-26"
 author = "tirefire"
-cover = "img/tirefire.gif"
+cover = "img/ecorp.gif"
 description = "practice image for securing and hardening an operating system"
 +++
 
