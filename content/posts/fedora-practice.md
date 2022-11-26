@@ -19,7 +19,7 @@ The theme is *Mr. Robot*, but really it's just based on a short scene from Seaso
 The image should automatically log in. The username and passwords are in the readme file. If you lock yourself out, please reextract and start over.
 
 ## Forensics Questions
-There are a lot more forensics questions than most images. I felt like students don't get enough direction, so virtually every finding in the image gets a hint from a forensics question.
+There are a lot more forensics questions than most images. I felt like students don't get enough direction, so virtually every finding in the image gets a hint from a forensics question. As you answer the questions, you'll find references to a T number, these correspond to the data found in the MITRE ATT&CK framework at https://attack.mitre.org/matrices/.
 
 ## Download
 The link is here https://ln5.sync.com/dl/3e4ff83c0/u2wyn5b9-yuthhkgw-dqhghbr4-qme8tqjx \
