@@ -6,4 +6,4 @@ cover = "img/tirefire.gif"
 description = "First Post"
 +++
 
-This is some content to include in the first post.
+Nothing is here, but what else do you expect from a tirefire?
