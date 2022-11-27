@@ -29,4 +29,4 @@ md5sum: `5ea0ff7823ff8bd8578a987d80a99436  mr.robot.sh.zip`
 Here are mistakes that are in the image:
 - Forensics Question 5 is incorrect. It should be the shell, not the user, and is not related to Fred.
 - Forensics Question 13 related findings are mistakenly not scored.
-- Forensics Question 14 just has information about the password so that you don't try to brute force it.
+- Forensics Question 14 just has information about the password so that you don't try to brute force it. You won't be able to find it on the file system, until you "unhide" it.
