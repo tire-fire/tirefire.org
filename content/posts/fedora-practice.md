@@ -24,3 +24,8 @@ There are a lot more forensics questions than most images. I felt like students 
 ## Download
 The link is here https://ln5.sync.com/dl/3e4ff83c0/u2wyn5b9-yuthhkgw-dqhghbr4-qme8tqjx \
 md5sum: `5ea0ff7823ff8bd8578a987d80a99436  mr.robot.sh.zip`
+
+## Errata
+Here are mistakes that are in the image:
+- Forensics Question 5 is incorrect. It should be the shell, not the user, and is not related to Fred.
+- Forensics Question 14 just has information about the password so that you don't try to brute force it.
