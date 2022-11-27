@@ -23,6 +23,7 @@ There are a lot more forensics questions than most images. I felt like students 
 
 ## Download
 The link is here https://ln5.sync.com/dl/3e4ff83c0/u2wyn5b9-yuthhkgw-dqhghbr4-qme8tqjx \
+with a mirror here https://drive.google.com/file/d/1QQYUdp1Qu1-0NXf7VHyiIMl2QY4X_izp/view \
 md5sum: `5ea0ff7823ff8bd8578a987d80a99436  mr.robot.sh.zip`
 
 ## Errata
