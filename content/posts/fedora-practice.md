@@ -16,7 +16,7 @@ To give some challenges which introduce technologies which students might not be
 The theme is *Mr. Robot*, but really it's just based on a short scene from Season 3 Episode 5 titled *eps3.4_runtime-error.r00*, and only loosely takes influence. Knowing Mr. Robot won't give any advantage, and doing this image won't spoil any of Mr. Robot.
 
 ## Getting started
-The image should automatically log in. The username and passwords are in the readme file. If you lock yourself out, please reextract and start over.
+The image should automatically log in. The username and passwords are in the readme file. If you lock yourself out, please re-extract and start over.
 
 ## Forensics Questions
 There are a lot more forensics questions than most images. I felt like students don't get enough direction, so virtually every finding in the image gets a hint from a forensics question. As you answer the questions, you'll find references to a T number, these correspond to the data found in the MITRE ATT&CK framework at https://attack.mitre.org/matrices/.
@@ -29,5 +29,5 @@ md5sum: `5ea0ff7823ff8bd8578a987d80a99436  mr.robot.sh.zip`
 ## Errata
 Here are mistakes that are in the image:
 - Forensics Question 5 is incorrect. It should be the shell, not the user, and is not related to Fred.
-- Forensics Question 13 related findings are mistakenly not scored.
+- Forensics Question 13 should refer to the user's password-less sudo access. Additionally, related findings are mistakenly not scored.
 - Forensics Question 14 just has information about the password so that you don't try to brute force it. You won't be able to find it on the file system, until you "unhide" it.
