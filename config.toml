@@ -5,6 +5,7 @@ theme = "hello-friend"
 paginate = 5
 
 [params]
+  enableGitInfo = true
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
@@ -42,7 +43,7 @@ paginate = 5
     dateFormatSingle = "2006-01-02"
     dateFormatList = "2006-01-02"
     # leave empty to disable, enter display text to enable
-    # lastModDisplay = ""
+    lastModDisplay = "Last Edited"
 
     [languages.en.params.logo]
       logoText = "tirefire"
