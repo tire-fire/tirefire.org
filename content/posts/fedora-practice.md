@@ -34,5 +34,5 @@ Here are mistakes that are in the image:
 - Forensics Question 13 should refer to the user's password-less sudo access. Additionally, related findings are mistakenly not scored.
 - Forensics Question 14 just has information about the password so that you don't try to brute force it. You won't be able to find it on the file system, until you "unhide" it.
 
-# Writeup
+## Writeup
 - https://github.com/Poarthan/mr.robot.sh-writeup
