@@ -1,3 +1,10 @@
++++
+title = "Cyber Patriot Curriculum"
+date = "2023-6-20"
+author = "tirefire"
+description = "Cyber Patriot Proposed Curriculum"
++++
+
 ## Cyber Patriot Proposed Curriculum
 
 ## Official Training Modules
