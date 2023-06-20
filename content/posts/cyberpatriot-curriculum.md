@@ -1,6 +1,6 @@
 +++
 title = "Cyber Patriot Curriculum"
-date = "2023-6-20"
+date = "2023-06-20"
 author = "tirefire"
 description = "Cyber Patriot Proposed Curriculum"
 +++
