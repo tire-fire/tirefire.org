@@ -57,6 +57,7 @@ description = "Cyber Patriot Proposed Curriculum"
   - Applying critical updates, security patches, and feature updates to the Windows operating system
 - Configuring security options, group policies, and security templates to harden the Windows environment
 - Event Log audit policies, monitoring logs, and analyzing event data for security incidents
+  - Sysmon from Sysinternals
 - Configuring firewall rules to allow critical services
 - Antivirus and Endpoint Protection
 - BitLocker Encryption
@@ -100,23 +101,33 @@ description = "Cyber Patriot Proposed Curriculum"
 - Repository Management
 - Updating configurations for critical services
   - ssh, web servers, ftp servers, etc...
+- User applications
+  - Enable secure settings for user applications such as Firefox and audit addons
 
 #### Operating System Hardening and Updates
 
 - OS Patching and Updates
   - Applying security patches and updates to the Linux operating system
 - Securing System Settings
-  - Configuring security options, system services, and secure shell (SSH) settings
+  - Configuring security options, system services
+  - X display, Wayland
+  - dbus
+  - polkit
+  - systemd logind
+  - File system mount options
 - System Monitoring and Logging
   - Implementing audit policies, monitoring logs, and detecting suspicious activities
+  - syslog
+  - auditd
 - Firewall Configuration and Rules
-  - iptables, ufw
+  - iptables, ufw, nftables
 - Scheduled Tasks
   - cron, at, systemd
 - Init system
   - systemd, sysvinit
 - Prohibited Files and Software Handling
   - File permissions
+  - Extended attributes
 
 
 ## Example servers and services
