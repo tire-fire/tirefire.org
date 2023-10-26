@@ -158,3 +158,21 @@ description = "Cyber Patriot Proposed Curriculum"
 
 ## Networking
 - NetAcad
+- Limit device access
+- Password encryption
+- Interface hardening
+  - Disable unused interfaces
+    - shutdown
+  - no ip redirects
+  - no ip proxy-arp
+  - no ip directed-broadcast
+- Routing protocol security
+- Disabling unnecessary services
+  - no ip http server
+  - no service finger
+  - no service ...
+- Banner
+- Rate Limiting
+- IP Options
+- Logging
+- NTP
