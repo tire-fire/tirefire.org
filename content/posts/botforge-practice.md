@@ -1,6 +1,6 @@
 +++
 title = "BotForge Practice Image"
-date = "2025-12-30"
+date = "2026-01-17"
 author = "tirefire"
 cover = "img/tirefire.gif"
 description = "Linux Mint 22 practice image for securing and hardening an operating system"
@@ -28,7 +28,9 @@ The image auto-logs in as mford. Read the README on the Desktop - it has the sce
 **Take a snapshot before you start.** You'll probably break something.
 
 ## Forensics Questions
-Seven questions on the Desktop (Forensics1.txt - Forensics7.txt). They're breadcrumbs - answer them and you'll stumble into most of the findings. Each references a MITRE ATT&CK technique ID if you want to dig deeper.
+Seven questions on the Desktop (Forensics1.txt - Forensics7.txt). They're breadcrumbs - answer them and you'll stumble into most of the findings. Each references a MITRE ATT&CK technique ID (like T1053) - search for it at [attack.mitre.org](https://attack.mitre.org) to learn what the technique is and how attackers use it.
+
+When you fix a vulnerability, the scoring report shows a hint pointing you toward related findings.
 
 ## Tips
 - Check what's running, what's listening, what's scheduled
@@ -38,8 +40,13 @@ Seven questions on the Desktop (Forensics1.txt - Forensics7.txt). They're breadc
 - The logs tell a story if you know where to look
 
 ## Download
-The link is here: https://ln5.sync.com/dl/a7d6d1f80#6mqzmf43-cg46ipx9-2cfvjtj4-p364qeqt \
-md5sum: `5276b58c0cdfba014b53c2a05ae55245  botforge-mint22.zip`
+https://downloads.tirefire.org/botforge-practice-v2.ova
+
+md5sum: `8fe368e474a4561e18e84f7840ba13b8`
+
+## Credentials
+- **Username:** mford
+- **Password:** mford123
 
 ## Requirements
 - VMware Workstation, Player, or Fusion
