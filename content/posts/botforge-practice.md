@@ -42,7 +42,7 @@ When you fix a vulnerability, the scoring report shows a hint pointing you towar
 ## Download
 https://downloads.tirefire.org/botforge-practice-v2.ova
 
-md5sum: `8fe368e474a4561e18e84f7840ba13b8`
+md5sum: `c5ef4ab19fd6cd9f79139ba6db2b65b9`
 
 ## Credentials
 - **Username:** mford
