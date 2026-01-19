@@ -54,7 +54,7 @@ md5sum: `c5ef4ab19fd6cd9f79139ba6db2b65b9`
 - 20GB disk space
 
 ## Errata
-None yet. Report issues via the contact page.
+- **Nginx directory traversal:** The check expects you to remove the alias line, but the real fix is adding a trailing slash to the `location` directive. This one won't score correctly - skip it.
 
 ## Writeup
 Coming eventually.
