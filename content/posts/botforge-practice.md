@@ -55,6 +55,7 @@ md5sum: `c5ef4ab19fd6cd9f79139ba6db2b65b9`
 
 ## Errata
 - **Nginx directory traversal:** The check expects you to remove the alias line, but the real fix is adding a trailing slash to the `location` directive. This one won't score correctly - skip it.
+- **MariaDB root password:** The check expects "Access denied" when connecting via TCP, but if MariaDB is socket-only you'll get "Can't connect" instead. May not score even when properly secured.
 
 ## Writeup
 Coming eventually.
