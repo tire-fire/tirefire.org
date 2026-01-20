@@ -58,4 +58,4 @@ md5sum: `c5ef4ab19fd6cd9f79139ba6db2b65b9`
 - **MariaDB root password:** The check expects "Access denied" when connecting via TCP, but if MariaDB is socket-only you'll get "Can't connect" instead. May not score even when properly secured.
 
 ## Writeup
-Coming eventually.
+https://github.com/christopher-gholmieh/BotForge-Writeup
