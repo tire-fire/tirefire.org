@@ -4,6 +4,12 @@ languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2
+
 [params]
   enableGitInfo = true
   # dir name of your blog content (default is `content/posts`).
