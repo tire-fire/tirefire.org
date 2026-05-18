@@ -2,10 +2,10 @@
 title = "Cyber Patriot Curriculum"
 date = "2025-12-26"
 author = "tirefire"
-description = "Cyber Patriot Proposed Curriculum"
+description = "Cyber Patriot Curriculum"
 +++
 
-## Cyber Patriot Proposed Curriculum
+## Cyber Patriot Curriculum
 
 ## Official Training Modules
 
@@ -29,6 +29,22 @@ Every round includes forensics questions that require:
 - Reading service banners and configuration values
 - Hash identification (MD5, SHA)
 - Analyzing system state to answer scenario questions
+
+Common artifact locations:
+- **Windows**
+  - Event Log IDs: 4624 (logon), 4625 (failed logon), 4720 (account created), 4732 (added to group), 7045 (service install), 4688 (process create)
+  - Registry run keys: `HKLM\Software\Microsoft\Windows\CurrentVersion\Run`, `RunOnce`, `HKCU\...\Run`
+  - Scheduled Tasks: `C:\Windows\System32\Tasks\`
+  - Startup folders: `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`
+  - Prefetch: `C:\Windows\Prefetch\`
+  - PowerShell history: `%AppData%\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`
+- **Linux**
+  - Shell history: `~/.bash_history`, `~/.zsh_history`
+  - SSH: `~/.ssh/authorized_keys`, `/etc/ssh/sshd_config`
+  - Auth logs: `/var/log/auth.log`, `/var/log/secure`, `/var/log/wtmp`, `/var/log/btmp`, `last`, `lastb`
+  - Cron: `/etc/crontab`, `/etc/cron.*`, `/var/spool/cron/`
+  - Systemd units: `/etc/systemd/system/`, `~/.config/systemd/user/`
+  - Persistence: `/etc/rc.local`, `/etc/profile.d/`, `~/.bashrc`, `~/.profile`
 
 
 ### Windows
@@ -59,7 +75,7 @@ Every round includes forensics questions that require:
   - Evaluating and disabling unnecessary or insecure services for enhanced security
   - Remote access services hardened or disabled
     - RDP (Network Level Authentication), Remote Assistance
-    - SMB (disable v1, signing, share permissions vs NTFS permissions, hidden shares)
+    - SMB (disable v1, signing, encryption, share permissions vs NTFS permissions, hidden shares, null sessions, anonymous access)
     - LDAP, Kerberos, DNS, Print, WinRM, etc...
 
 #### Operating System Hardening and Updates
@@ -74,12 +90,27 @@ Every round includes forensics questions that require:
   - Network security options and privilege elevation
 - Event Log audit policies, monitoring logs, and analyzing event data for security incidents
   - Sysmon from Sysinternals
+- PowerShell logging and hardening
+  - Script block logging
+  - Module logging
+  - Transcription
+  - Constrained Language Mode
+  - Execution policy
 - Configuring firewall rules to allow critical services
 - Antivirus and Endpoint Protection
 - BitLocker Encryption
 - Software/malware Detection and Removal
   - Identifying and removing backdoors, keyloggers, rootkits, and other malware using antivirus tools and security software
   - Using Sysinternals procmon/procexp/autoruns for detection
+- Application allowlisting
+  - AppLocker (rules, enforcement, audit mode)
+  - Windows Defender Application Control (WDAC)
+- Credential protection
+  - LAPS (Local Administrator Password Solution)
+  - Credential Guard
+  - Protected Users group
+  - LSA Protection
+- Defender Attack Surface Reduction (ASR) rules
 - Prohibited Files and Software Handling
   - Detecting and addressing prohibited files, unauthorized software, and potential security risks
   - Alternate data streams
@@ -95,7 +126,11 @@ Every round includes forensics questions that require:
 #### Account Security and Management
 
 - Password Policy
-  - PAM config
+  - PAM configuration
+    - pam_pwquality / pam_cracklib
+    - pam_tally2 / pam_faillock
+    - pam_unix
+    - /etc/pam.d/ stack ordering
   - Setting password length, age, complexity requirements, and hashing algorithms
   - Account Lockout Policy
   - Configuring lockout duration, threshold, administrators' privileges, and reset procedures
@@ -107,6 +142,15 @@ Every round includes forensics questions that require:
   - /etc/group
 - User Rights and Permissions
   - sudo
+    - visudo
+    - /etc/sudoers and /etc/sudoers.d/
+    - NOPASSWD entries
+    - wheel/sudo group membership
+- SSH access controls
+  - Key-based authentication (authorized_keys, key types, permissions)
+  - PermitRootLogin, PasswordAuthentication, PermitEmptyPasswords
+  - AllowUsers / AllowGroups / DenyUsers
+  - fail2ban (jail configuration, ban thresholds)
 
 #### Application Security and Updates
 
@@ -144,6 +188,15 @@ Every round includes forensics questions that require:
 - Kernel hardening
   - IPv4 TCP SYN cookies
   - sysctl security parameters
+- Mandatory Access Control
+  - AppArmor (profiles, enforce vs complain mode, aa-status)
+  - SELinux (contexts, modes, semanage, restorecon)
+- Rootkit and malware detection
+  - chkrootkit
+  - rkhunter
+  - Unexpected SUID/SGID binaries
+  - Suspicious cron entries and systemd units
+  - LD_PRELOAD and /etc/ld.so.preload abuse
 - Scheduled Tasks
   - cron, at, systemd
 - Init system
@@ -151,6 +204,9 @@ Every round includes forensics questions that require:
 - Prohibited Files and Software Handling
   - File permissions
   - Extended attributes
+  - SUID/SGID auditing (`find / -perm -4000`, `find / -perm -2000`)
+  - World-writable files and directories
+  - Files with no owner (`find / -nouser -o -nogroup`)
 
 
 ## Example servers and services
@@ -165,7 +221,6 @@ Every round includes forensics questions that require:
 - Mail: Postfix, Dovecot, sendmail, Microsoft Exchange, MailEnable, Roundcube
 - Monitoring: ELK stack
 - NTP
-- Minecraft Server
 
 
 ## Frameworks and Databases to use for resources
@@ -176,23 +231,66 @@ Every round includes forensics questions that require:
 - CyberChef https://gchq.github.io/CyberChef/
 
 
-## Networking
+## Cisco
 - NetAcad
-- Limit device access
+
+### Core Networking
+- Basic device configuration
 - Password encryption
+- Line vty configuration
+- VLANs and trunking
+- Routing (static, OSPF)
+- EtherChannel
+- Port security
+- Spanning Tree Protocol (STP)
+- ACLs
+
+### Critical Service Configuration
+- NTP
+- DNS
+- DHCP
+- AAA
+- VPN
+- SSH
+- FTP
+- SNMP
+
+### Security Hardening
+- Limit device access
+- Disable unused ports and interfaces
+  - shutdown
 - Interface hardening
-  - Disable unused interfaces
-    - shutdown
   - no ip redirects
   - no ip proxy-arp
   - no ip directed-broadcast
-- Routing protocol security
 - Disabling unnecessary services
   - no ip http server
   - no service finger
-  - no service ...
+- BPDU Guard
+- DHCP snooping
+- Dynamic ARP Inspection (DAI)
+- IP Source Guard (IPSG)
+- MAC address sticky
 - Banner
 - Rate Limiting
 - IP Options
 - Logging
-- NTP
+- Routing protocol security
+
+### Wireless
+- WPA2, WPA3
+- SSID configuration
+
+### Troubleshooting
+- Incorrect IP addresses
+- Interface descriptions
+- Duplex/speed mismatches
+- Trunking problems
+
+
+## Contributors
+
+Thanks to the following for proposed additions:
+
+- **StageKing** — Cisco section structure
+- **Henry** — SMB hardening expansion, PowerShell script block logging, AppArmor, PAM, rootkit detection; Cisco additions
